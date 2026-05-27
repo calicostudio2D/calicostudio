@@ -2,28 +2,30 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white selection:bg-white selection:text-black font-sans antialiased relative">
       
-      {/* LÍNEAS GUÍA ESTRUCTURALES */}
-      <div className="fixed inset-0 pointer-events-none z-40 flex justify-between px-6 md:px-12">
-        <div className="w-px h-full bg-white/5"></div>
-        <div className="w-px h-full bg-white/5 hidden md:block"></div>
-        <div className="w-px h-full bg-white/5"></div>
-      </div>
-
-      {/* HEADER FLOTANTE (TEXTO IZQUIERDA) */}
-      <header className="fixed top-0 left-0 w-full z-50 p-6 md:p-12 flex justify-between items-start pointer-events-none mix-blend-difference">
+      {/* HEADER FLOTANTE - ESTILO EDITORIAL */}
+      <header className="fixed top-0 left-0 w-full z-50 p-6 md:p-12 flex justify-between items-center pointer-events-none mix-blend-difference">
+        {/* Logo izquierdo */}
         <div className="pointer-events-auto">
-          <h1 className="text-2xl md:text-4xl font-black uppercase tracking-tighter leading-none">
-            Calico<br/>Studio
-          </h1>
+          <img 
+            src="/images/logo.png" 
+            alt="Calico Studio" 
+            className="w-12 md:w-16 h-auto object-contain" 
+          />
         </div>
-        <nav className="pointer-events-auto flex space-x-6 md:space-x-12 font-mono text-xs md:text-sm uppercase tracking-widest pt-2">
-          <a href="#reel" className="hover:opacity-50 transition-opacity">Reel</a>
-          <a href="#work" className="hover:opacity-50 transition-opacity">Work</a>
-          <a href="#about" className="hover:opacity-50 transition-opacity">About</a>
+
+        {/* Menú centrado */}
+        <nav className="pointer-events-auto flex space-x-8 md:space-x-12 font-serif text-sm uppercase tracking-widest">
+          <a href="#reel" className="hover:text-zinc-400 transition-colors">Reel</a>
+          <a href="#about" className="hover:text-zinc-400 transition-colors">About</a>
+          <a href="#work" className="hover:text-zinc-400 transition-colors">Work</a>
+          <a href="#contact" className="hover:text-zinc-400 transition-colors">Contact</a>
         </nav>
+
+        {/* Espacio derecho para equilibrio visual */}
+        <div className="w-12 md:w-16"></div>
       </header>
 
-      {/* HERO SECTION CON LOGO CENTRADO */}
+      {/* HERO SECTION */}
       <section id="reel" className="relative h-screen w-full flex flex-col justify-end p-6 md:p-12 border-b border-white/10 overflow-hidden">
         
         {/* VIDEO DE FONDO */}
@@ -34,7 +36,7 @@ export default function Home() {
             muted 
             playsInline 
             className="absolute top-0 left-0 w-full h-full object-cover blur-[6px] brightness-[0.7] scale-105" 
-            src="/videos/bg-loop.mp4" 
+            src="/videos/bg-loop-2.mp4" 
           />
         </div>
 
@@ -47,7 +49,7 @@ export default function Home() {
           />
         </div>
 
-        {/* Textos inferiores */}
+        {/* TEXTOS INFERIORES */}
         <div className="w-full flex flex-col md:flex-row justify-between items-end gap-6 relative z-10 drop-shadow-md">
           <div className="max-w-xl">
             <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/80 mb-3">
@@ -56,9 +58,9 @@ export default function Home() {
           </div>
           
           <div className="flex space-x-6 text-[11px] font-mono uppercase tracking-wider border-t border-white/30 pt-4 md:border-t-0 md:pt-0 w-full md:w-auto justify-between md:justify-start">
-            <a href="#" className="hover:underline">Instagram</a>
-            <a href="#" className="hover:underline">Vimeo</a>
-            <a href="#" className="hover:underline">Behance</a>
+            <a href="https://www.instagram.com/calicostudioart/" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a>
+            <a href="https://www.vimeo.com/calicostudioart" target="_blank" rel="noopener noreferrer" className="hover:underline">Vimeo</a>
+            <a href="https://www.linkedin.com/company/calicostudioart" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a>
           </div>
         </div>
       </section>
