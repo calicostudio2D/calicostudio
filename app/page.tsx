@@ -128,9 +128,7 @@ export default function Home() {
           <div className="md:w-1/3">
             <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-zinc-500 mb-4">Contacto</h4>
             <p className="text-lg font-bold mb-2">Hablemos de tu próximo proyecto.</p>
-            <a href="mailto:contactocalicostudio@gmail.com" className="text-zinc-400 hover:text-white font-mono text-sm underline block mb-1">
-              contactocalicostudio@gmail.com
-            </a>
+            <a href="mailto:contactocalicostudio@gmail.com" className="text-zinc-400 hover:text-white font-mono text-sm underline block mb-1">contactocalicostudio@gmail.com</a>
           </div>
         </div>
         <div className="max-w-4xl mx-auto mt-20 pt-8 border-t border-white/5 flex justify-between text-[10px] font-mono text-zinc-600 uppercase tracking-widest">
