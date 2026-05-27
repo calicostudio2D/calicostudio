@@ -26,7 +26,7 @@ export default function Home() {
       {/* HERO SECTION */}
       <section id="reel" className="relative h-screen w-full flex flex-col justify-end p-6 md:p-12 border-b border-white/10 overflow-hidden">
         
-        {/* VIDEO DE FONDO (Con desenfoque sutil y 30% de oscuridad) */}
+        {/* VIDEO DE FONDO */}
         <div className="absolute inset-0 bg-black">
           <video 
             autoPlay 
@@ -45,7 +45,8 @@ export default function Home() {
               [ 2D ANIMATION STUDIO — SANTIAGO, CHILE ]
             </p>
             <p className="text-lg md:text-2xl font-bold tracking-tight leading-snug text-white">
-              -.
+              Directores y creadores enfocados en producciones de alta calidad. 
+              Desarrollamos narrativas visuales con identidad y movimiento propio.
             </p>
           </div>
           
@@ -121,13 +122,15 @@ export default function Home() {
           <div className="md:w-1/2">
             <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-zinc-500 mb-4">El Estudio</h4>
             <p className="text-zinc-300 leading-relaxed text-sm md:text-base">
-              -.
+              AUDIOVISUALES AVILÉS LEÓN PARRA SpA — Operamos como una plataforma de desarrollo técnico y creativo, impulsando piezas animadas desde la conceptualización hasta la producción de línea definitiva.
             </p>
           </div>
           <div className="md:w-1/3">
             <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-zinc-500 mb-4">Contacto</h4>
             <p className="text-lg font-bold mb-2">Hablemos de tu próximo proyecto.</p>
-            <a href="mailto:contactocalicostudio@gmail.com" className="text-zinc-400 hover:text-white font-mono text-sm underline block mb-1">contactocalicostudio@gmail.com</a>
+            <a href="mailto:contactocalicostudio@gmail.com" className="text-zinc-400 hover:text-white font-mono text-sm underline block mb-1">
+              contactocalicostudio@gmail.com
+            </a>
           </div>
         </div>
         <div className="max-w-4xl mx-auto mt-20 pt-8 border-t border-white/5 flex justify-between text-[10px] font-mono text-zinc-600 uppercase tracking-widest">
