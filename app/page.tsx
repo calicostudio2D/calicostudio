@@ -2,34 +2,30 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white selection:bg-white selection:text-black font-sans antialiased relative">
       
-      {/* HEADER FLOTANTE - ESTILO EDITORIAL */}
-      <header className="fixed top-0 left-0 w-full z-50 p-6 md:p-12 flex justify-between items-center pointer-events-none mix-blend-difference">
-        {/* Logo izquierdo */}
+      {/* HEADER EDITORIAL */}
+      <header className="fixed top-0 left-0 w-full z-50 p-6 md:p-12 flex justify-between items-center pointer-events-none">
         <div className="pointer-events-auto">
           <img 
             src="/images/logo.png" 
-            alt="Calico Studio" 
-            className="w-12 md:w-16 h-auto object-contain" 
+            alt="Calico Studio"
+            className="w-12 md:w-16 h-auto object-contain brightness-0 invert" 
           />
         </div>
 
-        {/* Menú centrado */}
-        <nav className="pointer-events-auto flex space-x-8 md:space-x-12 font-serif text-sm uppercase tracking-widest">
+        <nav className="pointer-events-auto flex space-x-8 md:space-x-12 font-serif text-sm uppercase tracking-widest text-white">
           <a href="#reel" className="hover:text-zinc-400 transition-colors">Reel</a>
           <a href="#about" className="hover:text-zinc-400 transition-colors">About</a>
           <a href="#work" className="hover:text-zinc-400 transition-colors">Work</a>
           <a href="#contact" className="hover:text-zinc-400 transition-colors">Contact</a>
         </nav>
 
-        {/* Espacio derecho para equilibrio visual */}
         <div className="w-12 md:w-16"></div>
       </header>
 
       {/* HERO SECTION */}
-      <section id="reel" className="relative h-screen w-full flex flex-col justify-end p-6 md:p-12 border-b border-white/10 overflow-hidden">
+      <section id="reel" className="relative h-screen w-full flex flex-col justify-end p-6 md:p-12 border-b border-white/10 overflow-hidden bg-black">
         
-        {/* VIDEO DE FONDO */}
-        <div className="absolute inset-0 bg-black">
+        <div className="absolute inset-0 z-0">
           <video 
             autoPlay 
             loop 
@@ -40,17 +36,15 @@ export default function Home() {
           />
         </div>
 
-        {/* LOGO CENTRADO SOBRE EL VIDEO */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
           <img 
             src="/images/logo.png" 
             alt="Calico Studio Logo" 
-            className="w-48 md:w-72 h-auto object-contain mix-blend-screen" 
+            className="w-48 md:w-72 h-auto object-contain" 
           />
         </div>
 
-        {/* TEXTOS INFERIORES */}
-        <div className="w-full flex flex-col md:flex-row justify-between items-end gap-6 relative z-10 drop-shadow-md">
+        <div className="w-full flex flex-col md:flex-row justify-between items-end gap-6 relative z-20">
           <div className="max-w-xl">
             <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/80 mb-3">
               [ 2D ANIMATION STUDIO — SANTIAGO, CHILE ]
