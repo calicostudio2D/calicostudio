@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Calico Studio",
+  title: "Home │ Calico Studio",
   description: "2D animation studio",
 };
 
