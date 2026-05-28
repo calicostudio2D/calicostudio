@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white selection:bg-white selection:text-black font-sans antialiased relative scroll-smooth">
       
-      {/* HEADER */}
-      <header className="fixed top-0 left-0 w-full z-50 px-8 py-5 md:px-16 lg:px-24 md:py-6 flex justify-between items-center transition-all duration-300 bg-gradient-to-b from-black/90 via-black/40 to-transparent pb-12">
+      {/* HEADER (Adaptado a flex-col en móvil, intacto en PC) */}
+      <header className="fixed top-0 left-0 w-full z-50 px-6 py-4 md:px-16 lg:px-24 md:py-6 flex flex-col md:flex-row justify-between items-center transition-all duration-300 bg-gradient-to-b from-black/90 via-black/40 to-transparent pb-8 md:pb-12 gap-4 md:gap-0">
         
         <div className="z-20">
           <img 
@@ -21,7 +21,7 @@ export default function Home() {
           />
         </div>
 
-        <nav className={`${montserrat.className} absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex space-x-6 md:space-x-12 lg:space-x-16 text-[12px] md:text-[16px] lg:text-[18px] font-light uppercase tracking-[0.15em] md:tracking-[0.2em] text-white z-10 w-max`}>
+        <nav className={`${montserrat.className} relative md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 flex space-x-4 sm:space-x-6 md:space-x-12 lg:space-x-16 text-[10px] sm:text-[12px] md:text-[16px] lg:text-[18px] font-light uppercase tracking-[0.1em] md:tracking-[0.2em] text-white z-10 w-max`}>
           
           <a href="#reel" className="relative group overflow-hidden block text-zinc-200 hover:text-white active:scale-90 active:opacity-50 transition-all duration-300 h-[1.2em] leading-none pt-1">
             <span className="block transition-transform duration-300 ease-out group-hover:-translate-y-full">Reel</span>
@@ -46,7 +46,6 @@ export default function Home() {
         </nav>
         
         <div className="z-20 hidden md:flex items-center space-x-6">
-          
           <a href="https://www.instagram.com/calicostudioart/" target="_blank" rel="noopener noreferrer" className="relative group overflow-hidden block h-[20px] w-[20px] active:scale-90 active:opacity-50 transition-all duration-300">
             <span className="block transition-transform duration-300 ease-out group-hover:-translate-y-full text-zinc-200">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
@@ -97,7 +96,7 @@ export default function Home() {
       </header>
 
       {/* HERO SECTION */}
-      <section id="reel" className="relative h-screen w-full flex flex-col justify-end px-8 py-10 md:px-16 lg:px-24 md:py-16 border-b border-white/5 overflow-hidden bg-black">
+      <section id="reel" className="relative h-screen w-full flex flex-col justify-end px-6 py-10 md:px-16 lg:px-24 md:py-16 border-b border-white/5 overflow-hidden bg-black">
         
         <div className="absolute inset-0 z-0">
           <video 
@@ -114,13 +113,13 @@ export default function Home() {
           <img 
             src="/images/logo.png" 
             alt="Calico Studio Logo" 
-            className="w-48 md:w-72 h-auto object-contain" 
+            className="w-40 md:w-72 h-auto object-contain" 
           />
         </div>
 
         <div className="w-full flex flex-col md:flex-row justify-between items-end gap-6 relative z-20">
-          <div className="max-w-xl">
-            <p className="text-[11px] md:text-xs font-mono uppercase tracking-[0.3em] text-white/70 font-light mb-3">
+          <div className="max-w-xl text-center md:text-left w-full md:w-auto">
+            <p className="text-[9px] sm:text-[11px] md:text-xs font-mono uppercase tracking-[0.2em] md:tracking-[0.3em] text-white/70 font-light mb-3">
               [ 2D ANIMATION STUDIO — SANTIAGO, CHILE ]
             </p>
           </div>
@@ -128,16 +127,16 @@ export default function Home() {
       </section>
 
       {/* WORK SECTION */}
-      <section id="work" className="py-32 px-8 md:px-16 lg:px-24 bg-black z-10 relative">
-        <div className="mb-24 flex justify-between items-baseline border-b border-white/5 pb-8">
-          <h2 className={`${montserrat.className} text-4xl md:text-6xl lg:text-7xl font-light uppercase tracking-[0.1em] text-zinc-100`}>
+      <section id="work" className="py-24 md:py-32 px-6 md:px-16 lg:px-24 bg-black z-10 relative">
+        <div className="mb-16 md:mb-24 flex justify-center md:justify-between items-baseline border-b border-white/5 pb-8">
+          <h2 className={`${montserrat.className} text-3xl md:text-6xl lg:text-7xl font-light uppercase tracking-[0.1em] text-zinc-100 text-center md:text-left`}>
             Selected Work
           </h2>
         </div>
         
-        <div className="space-y-32 md:space-y-48 max-w-7xl mx-auto">
-          <div className="group block border-b border-white/5 pb-10">
-            <div className="w-full aspect-video bg-zinc-900 overflow-hidden relative mb-8 transition-transform duration-700 hover:scale-[1.02]">
+        <div className="space-y-24 md:space-y-48 max-w-7xl mx-auto">
+          <div className="group block border-b border-white/5 pb-8 md:pb-10">
+            <div className="w-full aspect-video bg-zinc-900 overflow-hidden relative mb-6 md:mb-8 transition-transform duration-700 hover:scale-[1.02]">
               <iframe 
                 src="https://player.vimeo.com/video/1196170471?title=0&byline=0&portrait=0" 
                 className="absolute top-0 left-0 w-full h-full border-0"
@@ -146,7 +145,7 @@ export default function Home() {
                 title="Hora del Té"
               ></iframe>
             </div>
-            <h3 className={`${montserrat.className} text-3xl md:text-4xl lg:text-5xl font-light uppercase tracking-[0.05em] text-zinc-200 transition-colors`}>
+            <h3 className={`${montserrat.className} text-2xl md:text-4xl lg:text-5xl font-light uppercase tracking-[0.05em] text-zinc-200 transition-colors text-center md:text-left`}>
               Hora del Té
             </h3>
           </div>
@@ -154,39 +153,39 @@ export default function Home() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section id="about" className="py-32 px-8 md:px-16 lg:px-24 bg-zinc-950 border-t border-white/5 z-10 relative">
+      <section id="about" className="py-24 md:py-32 px-6 md:px-16 lg:px-24 bg-zinc-950 border-t border-white/5 z-10 relative">
         <div className="max-w-5xl mx-auto text-center">
-          <h4 className="text-[11px] md:text-xs font-mono uppercase tracking-[0.3em] text-zinc-500 mb-8 font-light">The Studio</h4>
-          <p className={`${montserrat.className} text-zinc-200 font-light leading-tight text-3xl md:text-5xl lg:text-[3.5rem] tracking-wide`}>
+          <h4 className="text-[10px] md:text-xs font-mono uppercase tracking-[0.3em] text-zinc-500 mb-6 md:mb-8 font-light">The Studio</h4>
+          <p className={`${montserrat.className} text-zinc-200 font-light leading-snug md:leading-tight text-xl sm:text-2xl md:text-5xl lg:text-[3.5rem] tracking-wide`}>
             We operate as a technical and creative development platform, bringing stories to life through 2D animation.
           </p>
         </div>
       </section>
 
       {/* CONTACT SECTION */}
-      <section id="contact" className="pt-32 pb-12 px-8 md:px-16 lg:px-24 bg-black border-t border-white/5 z-10 relative flex flex-col justify-between min-h-[70vh]">
+      <section id="contact" className="pt-24 md:pt-32 pb-8 md:pb-12 px-6 md:px-16 lg:px-24 bg-black border-t border-white/5 z-10 relative flex flex-col justify-between min-h-[60vh] md:min-h-[70vh]">
         
         <div className="flex-grow flex flex-col justify-center items-center text-center max-w-6xl mx-auto w-full">
-          <p className="text-[11px] md:text-xs font-mono uppercase tracking-[0.3em] text-zinc-500 mb-8 font-light">
+          <p className="text-[10px] md:text-xs font-mono uppercase tracking-[0.2em] md:tracking-[0.3em] text-zinc-500 mb-6 md:mb-8 font-light">
             [ Let's talk about your next project ]
           </p>
           
           <a 
             href="mailto:contactocalicostudio@gmail.com" 
-            className={`${montserrat.className} text-3xl md:text-5xl lg:text-[4rem] font-light text-white hover:text-zinc-400 transition-colors tracking-tight break-all`}
+            className={`${montserrat.className} text-xl sm:text-3xl md:text-5xl lg:text-[4rem] font-light text-white hover:text-zinc-400 active:scale-95 transition-all tracking-tight break-all`}
           >
             contactocalicostudio@gmail.com
           </a>
         </div>
 
-        <div className="mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] md:text-xs font-mono font-light uppercase tracking-widest text-zinc-500">
+        <div className="mt-16 md:mt-24 pt-6 md:pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0 text-[10px] md:text-xs font-mono font-light uppercase tracking-widest text-zinc-500">
           
           <div className="text-center md:text-left">
             <p>© {new Date().getFullYear()} Calico Studio</p>
-            <p className="mt-2">Santiago, Chile</p>
+            <p className="mt-1 md:mt-2">Santiago, Chile</p>
           </div>
 
-          <div className="flex space-x-8">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8 md:space-x-0 mt-2 md:mt-0">
             <a href="https://www.instagram.com/calicostudioart/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
             <a href="https://www.vimeo.com/calicostudioart" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Vimeo</a>
             <a href="https://www.linkedin.com/company/calicostudioart" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
