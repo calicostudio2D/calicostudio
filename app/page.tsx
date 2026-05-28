@@ -32,7 +32,7 @@ export default function Home() {
             muted 
             playsInline 
             className="absolute top-0 left-0 w-full h-full object-cover blur-[6px] brightness-[0.7] scale-105" 
-            src="/videos/bg-loop-2.mp4" 
+            src="/videos/videobg.mp4" 
           />
         </div>
 
