@@ -2,8 +2,8 @@ import Header from './Header';
 
 export default function Home() {
   return (
-    <main className="h-screen w-full relative overflow-hidden bg-black text-white antialiased selection:bg-white selection:text-black">
-      <div className="absolute inset-0 z-0">
+    <main className="min-h-screen w-full relative overflow-hidden bg-black text-white antialiased selection:bg-white selection:text-black">
+      <div className="fixed inset-0 z-0">
         <video autoPlay loop muted playsInline className="w-full h-full object-cover brightness-[0.9]" src="/videos/videobg.mp4" />
       </div>
 

@@ -5,13 +5,13 @@ const montserrat = Montserrat({ subsets: ['latin'], weight: ['300', '400', '500'
 
 export default function Studio() {
   return (
-    <main className="h-screen w-full bg-black text-white antialiased flex flex-col relative overflow-hidden">
+    <main className="min-h-screen w-full bg-black text-white antialiased flex flex-col relative">
       <Header />
       <div className="fixed inset-0 z-0">
         <video autoPlay loop muted playsInline className="w-full h-full object-cover brightness-[0.9]" src="/videos/videobg.mp4" />
         <div className="absolute inset-0 bg-black/60 backdrop-blur-md"></div>
       </div>
-      <div className="flex-grow w-full max-w-6xl mx-auto flex flex-col justify-center items-center z-20 px-4 md:px-8 py-6 gap-y-6">
+      <div className="relative z-20 w-full max-w-6xl mx-auto px-4 md:px-8 py-24 md:py-6 flex flex-col justify-center items-center gap-y-10">
         <div className="text-center">
           <h4 className="text-[9px] uppercase tracking-[0.4em] text-zinc-500 mb-2 font-light">The Studio</h4>
           <p className={`${montserrat.className} text-zinc-200 font-light text-base md:text-lg tracking-wide max-w-2xl mx-auto`}>
@@ -19,8 +19,8 @@ export default function Studio() {
           </p>
         </div>
         <div className="w-full text-center">
-          <h2 className={`${montserrat.className} text-[10px] uppercase tracking-[0.3em] text-zinc-400 mb-4`}>Our Team</h2>
-          <div className="flex flex-row flex-wrap justify-center items-center gap-4 md:gap-10 w-full">
+          <h2 className={`${montserrat.className} text-[10px] uppercase tracking-[0.3em] text-zinc-400 mb-6`}>Our Team</h2>
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 w-full">
             {[ 
               { name: "Claudia Parra", role: "Co-founder & Creative Director", img: "/images/02.jpg" },
               { name: "Camila León", role: "Co-founder & Creative Director", img: "/images/01.jpg" },
@@ -38,7 +38,7 @@ export default function Studio() {
           </div>
         </div>
         <div className="w-full flex flex-col items-center">
-          <h2 className={`${montserrat.className} text-[10px] uppercase tracking-[0.4em] text-zinc-400 mb-2`}>Partner</h2>
+          <h2 className={`${montserrat.className} text-[10px] uppercase tracking-[0.4em] text-zinc-400 mb-4`}>Partner</h2>
           <div className="w-32 md:w-48 opacity-80 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500">
             <img src="/images/niebla.png" alt="Niebla" className="w-full h-auto" />
           </div>
