@@ -5,10 +5,9 @@ const montserrat = Montserrat({ subsets: ['latin'], weight: ['300', '400', '500'
 
 export default function Studio() {
   return (
-    // 1. Añadimos un div wrapper para el contenido y aseguramos que el scroll ocurra aquí
     <main className="min-h-screen w-full bg-black text-white antialiased relative overflow-x-hidden">
       
-      {/* 2. El Header debe tener un fondo y z-index alto para "tapar" el scroll */}
+      {/* Header fijo con z-index alto */}
       <div className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md">
         <Header />
       </div>
@@ -18,8 +17,11 @@ export default function Studio() {
         <div className="absolute inset-0 bg-black/70 backdrop-blur-md"></div>
       </div>
 
-      {/* 3. pt-28 (o lo que mida tu header) evita que el contenido empiece detrás del header */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col items-center px-4 pt-28 pb-20 gap-y-10">
+      {/* AJUSTE CLAVE: 
+        pt-24 para móvil (espacio para header) 
+        pt-40 para desktop (más aire)
+      */}
+      <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col items-center px-4 pt-24 md:pt-40 pb-20 gap-y-10">
         
         {/* Intro */}
         <div className="text-center px-2">
