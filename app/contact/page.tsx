@@ -10,22 +10,39 @@ export default function Contact() {
       
       {/* FONDO UNIFICADO */}
       <div className="fixed inset-0 z-0">
-        <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover brightness-[0.8]" src="/videos/videobg.mp4" />
+        <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover brightness-[0.9]" src="/videos/videobg.mp4" />
         <div className="absolute inset-0 bg-black/60 backdrop-blur-md"></div>
       </div>
       
-      {/* CONTENIDO CENTRADO - pt-24 para espacio en móvil */}
+      {/* CONTENIDO CENTRADO */}
       <div className="flex-grow w-full max-w-5xl mx-auto flex flex-col justify-center items-center z-20 px-6 pt-24 pb-12">
-        <p className="text-[9px] md:text-xs font-mono uppercase tracking-[0.3em] text-zinc-400 mb-6 font-light">Let's talk</p>
-        <a 
-          href="mailto:contactocalicostudio@gmail.com" 
-          className={`${montserrat.className} text-xl md:text-5xl font-light hover:text-zinc-300 transition-all tracking-tight break-words text-center px-4`}
-        >
-          contactocalicostudio@gmail.com
-        </a>
+        
+        {/* SECCIÓN CONTACTO */}
+        <div className="text-center mb-16">
+          <p className="text-[9px] md:text-xs font-mono uppercase tracking-[0.3em] text-zinc-400 mb-6 font-light">Let's talk</p>
+          <a 
+            href="mailto:contactocalicostudio@gmail.com" 
+            className={`${montserrat.className} text-xl md:text-5xl font-light hover:text-zinc-300 transition-all tracking-tight break-words text-center px-4`}
+          >
+            contactocalicostudio@gmail.com
+          </a>
+        </div>
+
+        {/* SECCIÓN: WORK WITH US */}
+        <div className="text-center">
+          <h2 className="text-[9px] md:text-xs font-mono uppercase tracking-[0.3em] text-zinc-400 mb-6 font-light">Work with us</h2>
+          <a 
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeyTdlSLweFDO7fSvNj2U4B0iyceU88PVWg30-3TkDCajMkjQ/viewform?usp=header" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block border border-white/20 px-8 py-3 text-[10px] md:text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-300"
+          >
+            Apply here →
+          </a>
+        </div>
       </div>
 
-      {/* FOOTER AJUSTADO - Se apila mejor en móvil */}
+      {/* FOOTER AJUSTADO */}
       <div className="w-full z-20 p-6 md:p-8 border-t border-white/5 text-[9px] md:text-[10px] font-mono uppercase tracking-widest text-zinc-500 flex flex-col-reverse md:flex-row justify-between items-center gap-6 md:gap-4 text-center">
         <p>© {new Date().getFullYear()} Calico Studio • Santiago, Chile</p>
         <div className="flex gap-6">

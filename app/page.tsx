@@ -8,7 +8,7 @@ export default function Home() {
       <div className="absolute inset-0 z-0">
         <video 
           autoPlay loop muted playsInline 
-          className="absolute top-0 left-0 w-full h-full object-cover brightness-[0.75]" 
+          className="absolute top-0 left-0 w-full h-full object-cover brightness-[0.9]" 
           src="/videos/videobg.mp4" 
         />
       </div>
@@ -20,8 +20,8 @@ export default function Home() {
       <Header />
 
       {/* ÁREA DE BOTÓN ADAPTADA PARA MÓVIL */}
-      <div className="absolute inset-0 z-20 flex items-center justify-center">
-        {/* En móvil: siempre visible (opacity-100). En escritorio: invisible hasta hacer hover (md:opacity-0) */}
+      {/* AGREGUÉ LA CLASE 'group' AQUÍ PARA QUE EL HOVER FUNCIONE */}
+      <div className="absolute inset-0 z-20 flex items-center justify-center group">
         <div className="w-full px-6 flex items-center justify-center">
           <a 
             href="/reel" 

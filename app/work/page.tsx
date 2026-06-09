@@ -10,7 +10,7 @@ export default function Work() {
       
       {/* FONDO UNIFICADO */}
       <div className="fixed inset-0 z-0">
-        <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover brightness-[0.8]" src="/videos/videobg.mp4" />
+        <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover brightness-[0.9]" src="/videos/videobg.mp4" />
         <div className="absolute inset-0 bg-black/60 backdrop-blur-md"></div>
       </div>
       
