@@ -5,16 +5,21 @@ const montserrat = Montserrat({ subsets: ['latin'], weight: ['300', '400', '500'
 
 export default function Studio() {
   return (
-    <main className="min-h-screen w-full bg-black text-white antialiased flex flex-col relative overflow-hidden">
-      <Header />
+    // 1. Añadimos un div wrapper para el contenido y aseguramos que el scroll ocurra aquí
+    <main className="min-h-screen w-full bg-black text-white antialiased relative overflow-x-hidden">
       
+      {/* 2. El Header debe tener un fondo y z-index alto para "tapar" el scroll */}
+      <div className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md">
+        <Header />
+      </div>
+
       <div className="fixed inset-0 z-0">
         <video autoPlay loop muted playsInline className="w-full h-full object-cover brightness-[0.9]" src="/videos/videobg.mp4" />
         <div className="absolute inset-0 bg-black/70 backdrop-blur-md"></div>
       </div>
 
-      {/* Ajusté el padding para móviles (py-6 -> py-20) para que no se choque con el header */}
-      <div className="flex-grow w-full max-w-6xl mx-auto flex flex-col justify-center items-center z-20 px-4 py-24 gap-y-10">
+      {/* 3. pt-28 (o lo que mida tu header) evita que el contenido empiece detrás del header */}
+      <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col items-center px-4 pt-28 pb-20 gap-y-10">
         
         {/* Intro */}
         <div className="text-center px-2">
@@ -24,7 +29,7 @@ export default function Studio() {
           </p>
         </div>
 
-        {/* Equipo - Cambiado a una cuadrícula de 2x2 en móvil para aprovechar espacio */}
+        {/* Equipo */}
         <div className="w-full text-center">
           <h2 className={`${montserrat.className} text-[10px] uppercase tracking-[0.3em] text-zinc-400 mb-6`}>Our Team</h2>
           <div className="grid grid-cols-2 md:flex md:flex-row justify-center gap-y-8 gap-x-4 w-full max-w-2xl mx-auto">
