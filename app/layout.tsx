@@ -37,12 +37,12 @@ export default function RootLayout({
           )}
         </div>
 
-        {/* Header con Blur Extremo de Doble Capa */}
-        <header className="sticky top-0 z-50 pointer-events-auto transition-all duration-300">
-          {/* Capa de Blur: Esta es la que "atrapa" el contenido debajo */}
+        {/* Header con scroll natural (relative) y efecto de capas */}
+        <header className="relative z-50 pointer-events-auto transition-all duration-300">
+          {/* Capa de Blur */}
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[30px] -z-10"></div>
           
-          {/* Capa de Contenido: Esta asegura que el texto se lea bien */}
+          {/* Capa de Contenido */}
           <div className="bg-black/60 border-b border-white/10">
             <Header />
           </div>
