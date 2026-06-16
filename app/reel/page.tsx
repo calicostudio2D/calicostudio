@@ -23,8 +23,9 @@ export default function Reel() {
 
   return (
     <PageWrapper>
-      <main className="min-h-screen w-full bg-transparent text-white antialiased flex flex-col relative">
-        <div className="flex-grow w-full max-w-6xl mx-auto flex flex-col justify-center items-center z-20 px-6 pt-20 pb-12">
+      {/* padding responsivo para evitar solapamiento con header */}
+      <main className="min-h-screen w-full bg-transparent text-white antialiased flex flex-col relative pt-28 md:pt-20">
+        <div className="flex-grow w-full max-w-6xl mx-auto flex flex-col justify-center items-center z-20 px-6 pb-12">
           {!isAuthenticated ? (
             <form onSubmit={handleLogin} className="flex flex-col gap-6 w-full max-w-[280px]">
               <input
@@ -40,12 +41,12 @@ export default function Reel() {
               {error && <p className="text-red-500/80 text-[9px] uppercase tracking-widest font-light text-center">Invalid Password</p>}
             </form>
           ) : (
-            <div className="w-full">
-              <div className="mb-12 text-center px-4">
-                <h2 className={`${montserrat.className} text-[16px] uppercase tracking-[0.3em] text-zinc-200 mb-4`}>
+            <div className="w-full max-w-4xl">
+              <div className="mb-8 md:mb-12 text-center px-4">
+                <h2 className={`${montserrat.className} text-[13px] md:text-[16px] uppercase tracking-[0.3em] text-white font-medium mb-4`}>
                   Collaborators Showcase
                 </h2>
-                <p className={`${montserrat.className} text-zinc-400 text-[10px] font-light max-w-lg mx-auto leading-relaxed uppercase tracking-[0.2em]`}>
+                <p className={`${montserrat.className} text-zinc-400 text-[9px] md:text-[10px] font-light max-w-lg mx-auto leading-relaxed uppercase tracking-[0.2em]`}>
                   Curated showcase of our team's professional experience.
                 </p>
               </div>

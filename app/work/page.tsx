@@ -8,12 +8,12 @@ export default function Work() {
 
   return (
     <PageWrapper>
-      <main className="min-h-screen w-full bg-transparent text-white antialiased flex flex-col relative">
-        <div className="flex-grow w-full max-w-6xl mx-auto flex flex-col justify-center items-center z-20 px-6 pt-32 pb-20 gap-y-12">
+      {/* Usamos min-h-screen y padding responsivo */}
+      <main className="min-h-screen w-full bg-transparent text-white antialiased flex flex-col relative pt-28 md:pt-32 pb-20">
+        <div className="flex-grow w-full max-w-6xl mx-auto flex flex-col justify-center items-center z-20 px-6 gap-y-8 md:gap-y-12">
           
           <div className="text-center">
-            {/* Título actualizado con estilo minimalista consistente */}
-            <h4 className={`${montserrat.className} text-[13px] uppercase tracking-[0.3em] text-white font-medium mb-12`}>
+            <h4 className={`${montserrat.className} text-[11px] md:text-[13px] uppercase tracking-[0.3em] text-white font-medium mb-8 md:mb-12`}>
               Explore our latest projects.
             </h4>
           </div>
@@ -25,19 +25,19 @@ export default function Work() {
             </div>
 
             <div className="w-full md:w-2/5 text-center md:text-left">
-              <p className="text-[8px] font-mono uppercase tracking-[0.3em] text-zinc-400 mb-1">Currently in production</p>
-              <h3 className={`${montserrat.className} text-2xl md:text-6xl font-medium mb-4`}>Hora del Té</h3>
+              <p className="text-[7px] md:text-[8px] font-mono uppercase tracking-[0.3em] text-zinc-400 mb-1">Currently in production</p>
+              <h3 className={`${montserrat.className} text-xl md:text-6xl font-medium mb-4`}>Hora del Té</h3>
               
-              <div className="space-y-1 text-xs md:text-base text-zinc-300 font-light max-w-sm mx-auto md:mx-0">
+              <div className="space-y-1 text-[10px] md:text-base text-zinc-300 font-light max-w-sm mx-auto md:mx-0">
                 <p><span className="text-zinc-600">Technique:</span> 2D Animation (Frame-by-frame & Cutout)</p>
                 <p><span className="text-zinc-600">Type:</span> Short film</p>
-                <p className="pt-2 italic text-zinc-400 text-[10px] md:text-xs">Original project by Calico Studio</p>
+                <p className="pt-2 italic text-zinc-400 text-[9px] md:text-xs">Original project by Calico Studio</p>
               </div>
             </div>
           </div>
 
-          {/* Cuadrícula de imágenes de apoyo */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-6xl">
+          {/* Cuadrícula de imágenes: Ajustada para móviles (2 cols) y escritorio (4 cols) */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 w-full max-w-6xl">
             {projectImages.map((imgName, i) => (
               <div key={i} className="aspect-video rounded-lg border border-white/10 overflow-hidden bg-zinc-900/50 hover:border-white/30 transition-all duration-300">
                 <img 
