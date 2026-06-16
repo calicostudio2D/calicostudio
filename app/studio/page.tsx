@@ -36,8 +36,12 @@ export default function Studio() {
               {team.map((member) => (
                 <div key={member.name} className="flex flex-col items-center w-1/4">
                   <div className="w-24 h-32 md:w-32 md:h-40 rounded-lg overflow-hidden mb-3 border border-white/10 bg-zinc-900">
-                    {/* grayscale aplicado de forma permanente */}
-                    <img src={`/images/${member.img}`} alt={member.name} className="w-full h-full object-cover grayscale" />
+                    {/* grayscale permanente + zoom al pasar el mouse */}
+                    <img 
+                      src={`/images/${member.img}`} 
+                      alt={member.name} 
+                      className="w-full h-full object-cover grayscale transition-transform duration-500 hover:scale-110" 
+                    />
                   </div>
                   <p className="text-[9px] md:text-sm font-medium tracking-wide text-center leading-tight">{member.name}</p>
                   <p className="text-[7px] md:text-[9px] uppercase tracking-[0.1em] text-zinc-500 mt-0.5 text-center">{member.role}</p>
@@ -57,7 +61,7 @@ export default function Studio() {
                   href={partner.link} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100"
+                  className="grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100 hover:scale-105"
                 >
                   <img src={`/images/${partner.img}`} alt={partner.name} className={`${partner.height} w-auto object-contain`} />
                 </a>
