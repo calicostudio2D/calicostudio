@@ -13,7 +13,7 @@ export default function RootLayout({
   const getOverlayStyle = (): string => {
     if (pathname === '/') return "";
     if (pathname === '/reel') return "absolute inset-0 bg-black/80 backdrop-blur-[20px]";
-    return "absolute inset-0 bg-black/70 backdrop-blur-[8px]";
+    return "absolute inset-0 bg-black/70 backdrop-blur-[20px]";
   };
 
   const overlayClass = getOverlayStyle();
@@ -37,12 +37,17 @@ export default function RootLayout({
           )}
         </div>
 
-        {/* Header con efecto glassmorphism */}
-        <header className="sticky top-0 z-50 pointer-events-auto bg-black/50 backdrop-blur-lg border-b border-white/10 md:bg-transparent md:backdrop-blur-none md:border-none transition-all duration-300">
-          <Header />
+        {/* Header con Blur Extremo de Doble Capa */}
+        <header className="sticky top-0 z-50 pointer-events-auto transition-all duration-300">
+          {/* Capa de Blur: Esta es la que "atrapa" el contenido debajo */}
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-[30px] -z-10"></div>
+          
+          {/* Capa de Contenido: Esta asegura que el texto se lea bien */}
+          <div className="bg-black/60 border-b border-white/10">
+            <Header />
+          </div>
         </header>
         
-        {/* Main: Se añadió pt-4 para dar un poco de aire si es necesario */}
         <main className="relative z-20 flex-grow pointer-events-auto pt-4 md:pt-0">
           {children}
         </main>
