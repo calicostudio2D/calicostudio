@@ -28,9 +28,7 @@ export default function Studio() {
             </p>
           </section>
 
-          {/* Secciones ajustadas con estilo minimalista */}
           <section>
-            {/* Títulos con el estilo de 'Let's talk' / 'Work with us' */}
             <h3 className={`${montserrat.className} text-[13px] uppercase tracking-[0.3em] text-white font-medium mb-8 text-center`}>
               Our Team
             </h3>
@@ -38,7 +36,8 @@ export default function Studio() {
               {team.map((member) => (
                 <div key={member.name} className="flex flex-col items-center w-1/4">
                   <div className="w-24 h-32 md:w-32 md:h-40 rounded-lg overflow-hidden mb-3 border border-white/10 bg-zinc-900">
-                    <img src={`/images/${member.img}`} alt={member.name} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                    {/* grayscale aplicado de forma permanente */}
+                    <img src={`/images/${member.img}`} alt={member.name} className="w-full h-full object-cover grayscale" />
                   </div>
                   <p className="text-[9px] md:text-sm font-medium tracking-wide text-center leading-tight">{member.name}</p>
                   <p className="text-[7px] md:text-[9px] uppercase tracking-[0.1em] text-zinc-500 mt-0.5 text-center">{member.role}</p>
@@ -48,7 +47,6 @@ export default function Studio() {
           </section>
 
           <section>
-            {/* Títulos con el estilo de 'Let's talk' / 'Work with us' */}
             <h3 className={`${montserrat.className} text-[13px] uppercase tracking-[0.3em] text-white font-medium mb-8 text-center`}>
               Partners
             </h3>
