@@ -37,18 +37,13 @@ export default function RootLayout({
           )}
         </div>
 
-        {/* Header con comportamiento responsivo */}
+        {/* Header simplificado y robusto */}
         <header className="relative z-50 pointer-events-auto transition-all duration-300">
-          {/* Capa de Blur:
-              - Se muestra en móvil (invisible en escritorio con md:hidden)
+          {/* Aplicamos el blur y el fondo negro directamente aquí.
+              - Móvil: bg-black/70 y backdrop-blur-2xl (Intenso)
+              - Escritorio: md:bg-transparent y md:backdrop-blur-none
           */}
-          <div className="md:hidden absolute inset-0 bg-black/40 backdrop-blur-[30px] -z-10"></div>
-          
-          {/* Capa de Contenido:
-              - Móvil: Fondo negro semitransparente con borde.
-              - Escritorio: Fondo transparente (md:bg-transparent) y sin borde (md:border-none).
-          */}
-          <div className="bg-black/60 md:bg-transparent border-b border-white/10 md:border-none">
+          <div className="bg-black/70 backdrop-blur-2xl border-b border-white/10 md:bg-transparent md:backdrop-blur-none md:border-none">
             <Header />
           </div>
         </header>
