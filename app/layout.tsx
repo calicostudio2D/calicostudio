@@ -37,11 +37,12 @@ export default function RootLayout({
           )}
         </div>
 
-        {/* Header tipo "Caja Flotante" */}
-        <header className="sticky top-4 z-50 pointer-events-auto mx-4 md:mx-auto max-w-5xl rounded-2xl bg-black/60 backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)] transition-all duration-300">
+        {/* Header con efecto glassmorphism */}
+        <header className="sticky top-0 z-50 pointer-events-auto bg-black/50 backdrop-blur-lg border-b border-white/10 md:bg-transparent md:backdrop-blur-none md:border-none transition-all duration-300">
           <Header />
         </header>
         
+        {/* Main: Se añadió pt-4 para dar un poco de aire si es necesario */}
         <main className="relative z-20 flex-grow pointer-events-auto pt-4 md:pt-0">
           {children}
         </main>
