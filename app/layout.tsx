@@ -37,13 +37,18 @@ export default function RootLayout({
           )}
         </div>
 
-        {/* Header con scroll natural (relative) y efecto de capas */}
+        {/* Header con comportamiento responsivo */}
         <header className="relative z-50 pointer-events-auto transition-all duration-300">
-          {/* Capa de Blur */}
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-[30px] -z-10"></div>
+          {/* Capa de Blur:
+              - Se muestra en móvil (invisible en escritorio con md:hidden)
+          */}
+          <div className="md:hidden absolute inset-0 bg-black/40 backdrop-blur-[30px] -z-10"></div>
           
-          {/* Capa de Contenido */}
-          <div className="bg-black/60 border-b border-white/10">
+          {/* Capa de Contenido:
+              - Móvil: Fondo negro semitransparente con borde.
+              - Escritorio: Fondo transparente (md:bg-transparent) y sin borde (md:border-none).
+          */}
+          <div className="bg-black/60 md:bg-transparent border-b border-white/10 md:border-none">
             <Header />
           </div>
         </header>
